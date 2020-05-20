@@ -1,7 +1,7 @@
 import time
 import vk_api
 
-vk = vk_api.VkApi(token = 'Your api token')
+vk = vk_api.VkApi(token='Your api token')
 
 param = {
     'count': 1,
@@ -9,12 +9,14 @@ param = {
     'filter': 'unread'
 }
 
+
 def write_msg(user_id, msg, random):
     vk.method('messages.send', {
         'user_id': user_id,
         'message': msg,
         'random_id': random
     })
+
 
 try:
     while True:

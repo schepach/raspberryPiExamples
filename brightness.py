@@ -2,17 +2,17 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(18,GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
 
-pwm = GPIO.PWM(18,1000)
-dutyCycle = 50
-pwm.start(dutyCycle)
+pwm = GPIO.PWM(18, 1000)
+duty_cycle = 50
+pwm.start(duty_cycle)
 
 while(True):
-    print('dutyCycle {}'.format(dutyCycle))
+    print('duty_cycle {}'.format(duty_cycle))
     time.sleep(0.01)
-    dutyCycle += 1
+    duty_cycle += 1
 
-    if (dutyCycle) > 100:
-        dutyCycle = 0
-    pwm.ChangeDutyCycle(dutyCycle)
+    if (duty_cycle) > 100:
+        duty_cycle = 0
+    pwm.ChangeDutyCycle(duty_cycle)

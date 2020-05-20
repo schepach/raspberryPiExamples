@@ -4,18 +4,18 @@ import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-blueArray = [14, 15, 17, 10, 24, 18, 21, 12, 26]
-yellowArray = [13, 19, 16]
+blue_array = [14, 15, 17, 10, 24, 18, 21, 12, 26]
+yellow_array = [13, 19, 16]
 
-GPIO.setup(blueArray,GPIO.OUT)
-GPIO.output(blueArray,GPIO.HIGH)
+GPIO.setup(blue_array, GPIO.OUT)
+GPIO.output(blue_array, GPIO.HIGH)
 time.sleep(3)
-GPIO.output(blueArray,GPIO.LOW)
+GPIO.output(blue_array, GPIO.LOW)
 
-GPIO.setup(yellowArray,GPIO.OUT)
-GPIO.output(yellowArray,GPIO.HIGH)
+GPIO.setup(yellow_array, GPIO.OUT)
+GPIO.output(yellow_array, GPIO.HIGH)
 time.sleep(3)
-GPIO.output(yellowArray,GPIO.LOW)
+GPIO.output(yellow_array, GPIO.LOW)
 
 print('Cleanup is done...')
 
